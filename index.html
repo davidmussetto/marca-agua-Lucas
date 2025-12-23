@@ -2,21 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Marca de agua en PDF</title>
+    <title>Marca de Agua PDF</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <h1>Agregar marca de agua a PDF</h1>
-    <form action="WatermarkServlet" method="post" enctype="multipart/form-data">
-        <label>Seleccionar PDF</label>
+
+<div class="card">
+    <h1>Marca de agua en PDF</h1>
+    <p class="subtitle">Subí un PDF y descargalo con marca de agua</p>
+
+    <form action="WatermarkServlet" method="POST" enctype="multipart/form-data">
+        <label>Archivo PDF</label>
         <input type="file" name="pdf" accept="application/pdf" required>
 
         <label>Texto de la marca de agua</label>
-        <input type="text" name="watermark" required>
+        <input type="text" name="watermark"
+               value="EQUIPO ECONOMICO LUSCAS BRONICARDI">
 
         <button type="submit">Procesar PDF</button>
     </form>
 </div>
+
 </body>
 </html>
